@@ -2,3 +2,4 @@ flask
 flask-sqlalchemy
 psycopg[binary]
 gunicorn
+azure-storage-blob
