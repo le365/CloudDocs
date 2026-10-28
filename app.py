@@ -1,10 +1,32 @@
+from flask import Flask, render_template, request, redirect, url_for, flash
+from flask_sqlalchemy import SQLAlchemy
 import os
 from werkzeug.utils import secure_filename
+
+# 1. Khởi tạo Flask app PHẢI ĐẶT Ở ĐẦU TIÊN
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'your_secret_key'
+
+# 2. Cấu hình Database
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'postgresql://postgres:password@localhost:5432/clouddocs_db')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
 
 # Thư mục lưu file tạm trên server
 UPLOAD_FOLDER = 'uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
+# 3. Model lưu thông tin file
+class Document(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    filename = db.Column(db.String(255), nullable=False)
+    blob_url = db.Column(db.String(512), nullable=False)
+
+# Tạo bảng tự động
+with app.app_context():
+    db.create_all()
+
+# 4. Các Route của ứng dụng
 @app.route('/')
 def index():
     docs = Document.query.all()
@@ -35,6 +57,4 @@ def upload_file():
         return redirect(url_for('index'))
 
 if __name__ == '__main__':
-    with app.app_context():
-        db.create_all()
     app.run(debug=True)
