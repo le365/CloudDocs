@@ -1,22 +1,10 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
-from flask_sqlalchemy import SQLAlchemy
 import os
+from werkzeug.utils import secure_filename
 
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'your_secret_key'
+# Thư mục lưu file tạm trên server
+UPLOAD_FOLDER = 'uploads'
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-# Cấu hình kết nối PostgreSQL (tự động nhận từ Render hoặc dùng mặc định khi chạy local)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'postgresql://postgres:password@localhost:5432/clouddocs_db')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-db = SQLAlchemy(app)
-
-# Model lưu thông tin file trong PostgreSQL
-class Document(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    filename = db.Column(db.String(255), nullable=False)
-    blob_url = db.Column(db.String(512), nullable=False)
-with app.app_context():
-    db.create_all()
 @app.route('/')
 def index():
     docs = Document.query.all()
@@ -34,10 +22,14 @@ def upload_file():
         return redirect(request.url)
     
     if file:
-        filename = file.filename
+        filename = secure_filename(file.filename)
+        file_path = os.path.join(UPLOAD_FOLDER, filename)
+        file.save(file_path)
         
-        # Lưu thông tin tạm thời hoặc xử lý file tại đây nếu cần
-        # (Đã lược bỏ phần Azure Blob Storage theo yêu cầu)
+        # Lưu thông tin vào database PostgreSQL
+        new_doc = Document(filename=filename, blob_url=file_path)
+        db.session.add(new_doc)
+        db.session.commit()
         
         flash('Tải tài liệu lên thành công!')
         return redirect(url_for('index'))
