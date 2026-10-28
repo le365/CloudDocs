@@ -1,0 +1,93 @@
+{
+  "personal": {
+    "fullName": "DƯƠNG THỊ LỆ",
+    "title": "Kế toán / Kế toán thực tập (Fresher)",
+    "email": "dtc235200443@gmail.com",
+    "phone": "0338696055",
+    "address": "Thái Nguyên",
+    "linkedin": "",
+    "github": "",
+    "portfolio": "",
+    "summary": "Sinh viên CNTT chuyển sang theo đuổi nghề Kế toán. Có nền tảng tốt về tư duy logic, xử lý số liệu, Excel và hệ thống thông tin. Sưu tầm tiếng Trung (HSK/HSKK) — lợi thế làm việc với đối tác/khách hàng Trung Quốc. Có kinh nghiệm freelance xử lý dữ liệu, báo cáo, hỗ trợ kế toán nhỏ. Chăm chỉ, cẩn thận, học nhanh, mong muốn được đào tạo bài bản trong môi trường chuyên nghiệp."
+  },
+  "education": [
+    {
+      "degree": "Đại học / Cao đẳng - Công nghệ thông tin (Đang học / Đã tốt nghiệp)",
+      "school": "Tên Trường Đại học / Cao đẳng tại Thái Nguyên (VD: ĐH Thái Nguyên, Cao đẳng Kỹ thuật Thái Nguyên...)",
+      "year": "2022 – 2026 (dự kiến) / Năm tốt nghiệp: 202x",
+      "gpa": "",
+      "highlights": [
+        "Chuyên ngành: Công nghệ thông tin / Hệ thống thông tin quản lý",
+        "Môn học liên quan kế toán: Cơ sở dữ liệu, Phân tích dữ liệu, Thống kê, Quản trị hệ thống thông tin",
+        "Kỹ năng máy tính: Excel nâng cao (PivotTable, VLOOKUP, Power Query), Access, SQL cơ bản"
+      ]
+    }
+  ],
+  "skills": {
+    "accounting_tools": ["Excel nâng cao (PivotTable, VLOOKUP, XLOOKUP, Power Query, Macro cơ bản)", "Phần mềm kế toán: MISA, Fast Accounting, Bravo (tự học / khóa học)", "Google Sheets, Power BI cơ bản"],
+    "languages": ["Tiếng Việt (Native)", "Tiếng Trung (HSK 4/5 / HSKK / Giao tiếp tốt - đọc viết nghe nói)", "Tiếng Anh (Đọc hiểu tài liệu kỹ thuật, TOEIC xxx nếu có)"],
+    "it_skills": ["SQL cơ bản (SELECT, JOIN, GROUP BY)", "Python cơ bản (pandas, openpyxl - tự động hóa báo cáo)", "Git/GitHub, VS Code", "Hiểu quy trình ERP, hệ thống thông tin kế toán"],
+    "soft": ["Cẩn thận, kỹ tính, ít sai sót với số liệu", "Tư duy logic, phân tích dữ liệu tốt (nhờ nền tảng IT)", "Làm việc độc lập, chịu áp lực deadline tốt", "Giao tiếp tốt, hòa đồng, thích học hỏi", "Thái độ tử tế, trung thực, sẵn sàng bắt đầu từ con số 0"]
+  },
+  "projects": [
+    {
+      "name": "Dự án tự động hóa báo cáo Excel / Google Sheets (Freelance)",
+      "desc": "Xây dựng file báo cáo tự động: nhập liệu → tự tính toán, tổng hợp, xuất báo cáo theo mẫu. Giảm thời gian handmade 80%.",
+      "tech": ["Excel (Power Query, PivotTable, Macro/VBA cơ bản)", "Google Sheets (Apps Script)"],
+      "link": "",
+      "demo": "",
+      "highlights": ["Xử lý dữ liệu thô → báo cáo sạch, chuẩn mẫu", "Tự động hóa lặp lại hàng tháng/quý", "Khách hàng hài lòng, giới thiệu thêm đơn khác"]
+    },
+    {
+      "name": "Hỗ trợ kế toán nhỏ / nhập liệu chứng từ (Freelance)",
+      "desc": "Nhập chứng từ, đối chiếu ngân hàng, tổng hợp thu chi, hỗ trợ kê khai thuế cơ bản cho hộ kinh doanh / công ty nhỏ.",
+      "tech": ["MISA / Fast Accounting / Excel", "Tra cứu thuế, hóa đơn điện tử"],
+      "link": "",
+      "demo": "",
+      "highlights": ["Đối chiếu chính xác, phát hiện chênh lệch nhỏ", "Hỗ trợ kê khai thuế GTGT, TNCN hàng tháng", "Giao tiếp tốt với chủ đơn vị, hiểu quy trình thực tế"]
+    },
+    {
+      "name": "Dự án môn học CNTT: Quản lý kho / bán hàng / tài chính cá nhân",
+      "desc": "Ứng dụng web/desktop quản lý nhập xuất tồn, công nợ, báo cáo doanh thu. Áp dụng kiến thức DB, SQL, lập trình.",
+      "tech": ["C# / Java / Python", "SQL Server / MySQL", "WinForm / Web đơn giản"],
+      "link": "github.com/duongthile/ql-kho (nếu có)",
+      "demo": "",
+      "highlights": ["Thiết kế DB chuẩn 3NF, ERD rõ ràng", "Báo cáo: Tồn kho, Công nợ, Doanh thu - Lợi nhuận", "Hiểu luồng dữ liệu từ nghiệp vụ → báo cáo tài chính"]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Freelance: Xử lý dữ liệu / Hỗ trợ kế toán / Nhập liệu",
+      "company": "Tự do / Hợp tác với các hộ kinh doanh, công ty nhỏ tại Thái Nguyên & Online",
+      "period": "2023 – Hiện tại",
+      "bullets": [
+        "Nhập chứng từ, phân loại khoản thu/chi, đối chiếu số dư ngân hàng",
+        "Tổng hợp báo cáo thu chi hàng tháng, hỗ trợ kê khai thuế GTGT, TNCN",
+        "Xây dựng file Excel tự động hóa báo cáo, giảm thao tác thủ công",
+        "Giao tiếp bằng tiếng Trung với một số đối tác/khách hàng từ Trung Quốc",
+        "Học cách dùng phần mềm MISA/Fast Accounting qua thực tế"
+      ]
+    },
+    {
+      "role": "Thành viên CLB / Hội sinh viên / Volunteer (nếu có)",
+      "company": "Trường Đại học / Cao đẳng",
+      "period": "202x – 202x",
+      "bullets": [
+        "Tổ chức sự kiện, quản lý kinh phí CLB/hội (thu chi, báo cáo tài chính nhỏ)",
+        "Hỗ trợ bạn bè môn Tin học văn phòng, Excel, lập trình cơ bản"
+      ]
+    }
+  ],
+  "certificates": [
+    "Tiếng Trung: HSK 4 / HSK 5 / HSKK (nếu có chứng chỉ) — Giao tiếp tốt, đọc hiểu tài liệu kinh doanh",
+    "Tin học văn phòng: Chứng chỉ MOS Excel / ICDL / Tin học văn phòng A/B/C (nếu có)",
+    "Đang tự học / dự định thi: Chứng chỉ Kế toán trưởng / Kế toán viên (VAS), ACCA Foundation (nếu định hướng)",
+    "Các khóa online: Kế toán thực hành, Thuế, Excel cho kế toán (Unica, Edumall, Coursera...)"
+  ],
+  "activities": [
+    "Sở thích: Hát (tham gia CLB hát / giải hát trường / khu vực — tự tin, biểu diễn tốt)",
+    "Tham gia hoạt động tình nguyện, đoàn thể tại địa phương / trường",
+    "Đọc sách kế toán, thuế, tài chính cá nhân, kỹ năng mềm",
+    "Tự học tiếng Trung chuyên ngành kinh tế - tài chính - kế toán"
+  ]
+}
