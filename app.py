@@ -15,7 +15,8 @@ class Document(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     filename = db.Column(db.String(255), nullable=False)
     blob_url = db.Column(db.String(512), nullable=False)
-
+with app.app_context():
+    db.create_all()
 @app.route('/')
 def index():
     docs = Document.query.all()
